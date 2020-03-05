@@ -1,0 +1,110 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang16393{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.18362}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\b\f0\fs22\lang9 1. What is spring boot and difference with spring?\b0\par
+spring boot is a spring module which aims in simplify web development using java.It is used to create stand alone spring based projects which we can just run. so it basically removes lots of configurations and boiler plate codes.. it aims in rapid development of application, spring boot comes with auto configuration, auto dependencies ,embedded http servers and spring boot cli.\par
+spring boot increases productivity and provides lot of convienences to write our own bussiness logic\par
+\par
+spring vs spring boot\par
+spring is web application based on java while spring boot is a module of spring\par
+spring provides tools and lib to build customized web application while spring boot provides environment for rapid building stand alone spring based application which we can just run.\par
+spring is more complex than spring boot.\par
+in spring we have to write much boiler plate codes for configuration while in spring boot we have to use annotations for autoconfiguration, spring automatically downloads all the dependencies from maven which are required to run the application.\par
+\par
+\b 2. advantages of spring boot\b0\par
+spring boot provides autoconfiguration to load a set of default configuration to quick start a application\par
+it also creates a stand alone application with a range of large non functional features that are common to large classes of projects\par
+it comes with embedded tomcat, servelet container to avoid usage of war files\par
+spring boot provides oopiniated view to reduce developer efforts and simplify maven cinfiguration\par
+it provides spring cli to develop and test applications\par
+comes with spring boot starters for dependency management and security\par
+comes with wide range of api for managing and monitoring applications in dev and prod\par
+comes with spring actuator to provide help with running our spring boot application \par
+integrates with spring ecosystem such as spring jdbc spring aop spring, spring data, spring orm for reducing boiler plate codes.\par
+\b 3. list of Spring boot starters \b0\par
+spring-boot-starter ->this is the core starter which inludes logging and auto configuration support\par
+spring-boot-starter-jdbc -> this starter is used to manage connection pool with jdbc\par
+spring-boot-starter-web -> this starter is used to build web application using restfull web services  using spring mvc\par
+spring boot starter aop -> this starter is used for aspect oriented programming with aspectj and spring aop\par
+spring boot starter data jpa -> this starter is used for spring data jpa with hibernate\par
+spring boot starter test -> this starter is used to test spring boot application\par
+\b 4. what is spring actuator and its advantages?\par
+\b0 spring actuator is a cool feature of spring boot which is used to monitor what is happening inside a running applications. whenever we need to debug our application and analyse logs, we need to know what is happening inside our running application. here comes spring actuator into picture, it helps in monitoring our running appplication such as identifing beans, usage of cpu etc. it provides an easy way to access production ready end points and fetch all kinds of information from web.\par
+\b 5. what is thymeleaf?\par
+\b0 thymeleaf is server side java template engine designed used for web application. it aims to bring natural template for your web application and can integrate with spring and html5 java web application. to use this we have to add dependencies.\par
+<dependency>\par
+<groupId> spring-springframework-boot</>\par
+<artifactId>spring-boot-starter-thymeleaf</>\par
+</>\par
+\b 6.Explain Spring data?\b0\par
+Spring data aims in making easy for the developers to use relational,non relational database,cloud based data services or any other data access technologies.so basically it helps in data accesing and retains the underlying data.\par
+\b 7.@SpringBootApplication\par
+\b0 This annotation marks the main class of the springbootapplication.\par
+this encapsulates @autoconfiguration @configuration and @componentscan with their default attributes\par
+\b 8.@Autoconfiguration\b0\par
+this annotations is used as name says for auto configuration. this looks for autoconfigured beans in the class path and autoconfigures them\par
+\b 9.@configuration\par
+\b0 this is used to indicate that a class defines more than one beans and these beans are processed by spring ioc and generate bean defination and service request at runtime.\par
+\b 10.@componentscan(basePackage="")\b0\par
+this annotation looks for @component annoted classes and create object in the container.\par
+as @component annoted classes are candidate for autoscanning \par
+\b 11.@Propertysource("classpath:")\par
+\b0 this is used to include property source to spring environment\par
+\b 12.@component\b0 t\par
+this annotations marks the class is a spring controller\par
+annoted classes are used for handling multiple requests and mapping to request handlers methods . \par
+\b 13.@service\par
+\b0 this annotations marks the class that performs some services such as execcuting bussiness logic,performing calculations and calling external api's .it is special kind of component intended to be used in service layer.\par
+\b 14.@repository\b0\par
+this annotations marks the java classes that directly access the data bases.\par
+@repository classes works as a marker for any class that fulfills the role of repository or dao\par
+\b 15.@requestmapping\par
+\b0 this annotation is used to map the request coming to specific request handler methods.\par
+this  annotation is used in both class and methods.\par
+in class level: when requestmapping is used it creates a base uri for all the methods\par
+in method level when used it becomes specific to that handler method.\par
+from this we infer that the class level request mapping will remain same for all the methods while method level will have their own request mapping.\par
+\b 16. @crossorigin(origin="")\b0\par
+when it comes to scenerio where the host that serves the javascript is diiferent from the host which serves the data. in such cases cross origin annotation is used to bridge the communication and cross origin resource sharing enables cross origin communication.\par
+to enable this we need to add @crossorigin nnotation at class level.\par
+\b 17.getmapping\par
+\b0 this annotation is used to map http get request onto specific handler methods,\par
+it is just shortcut for @requestmapping(value="** ",method="requestmethod.get")\par
+\b 18.postmapping\b0\par
+this annotation is used to map http post request onto specific handler methods\par
+shortcut for @requestmapping(value="** ",method="requestmethod.post")\par
+\b 19.putmapping\b0\par
+this annotation is used to map http put mapping onto specific handler methods\par
+shortcut for @requestmapping(value="** ",method="requestmethod.put")\par
+\b 20.deletemapping\b0\par
+this annotation is used to map http delete mapping onto specific handler methods\par
+shortcut for @requestmapping(value="** ",method="requestmethod.delete")\par
+\b 21.@pathvariable\b0\par
+this annotation is used to annotate request handler method arguments\par
+where @pathvariable value is bound to URI template variable.\par
+\b 22.@requestparam\par
+\b0 this annotation is used to annotate request handler method arguments\par
+in case of get request we get parameter in the uri we use @requestparam annotation to retrive the uri parameter and map it to method arguments.\par
+\b 23.@requestbody\b0\par
+this annotation is used to annotate request handler method arguments.\par
+this insures that method parameter is bound to the value of http request body\par
+\b 24.@responsbody\b0\par
+this annotation is used to annotate requesthandler methods not method argument. it indicates that the result type should be written directly to response body in whatever format we specify.\par
+\b 25. @restcontroller\par
+\b0 this method marks a class as a controller where every methods return a object instead of view. it is combination of @controller and @responsebody\par
+by adding this annotation we no longer require @responsebody on every request handler method and no longer require view resolver ,just send the domain object as http response in format like json.\par
+\b 26. @autowired\b0\par
+this annotation is used for automatic dependency injection.\par
+this marks a constructor, field, setter methods\par
+\b 27. @qualifier("beanname")\b0\par
+this annotation is used in conjunction with autowired to avoid confusion when we have two or more bean of same type\par
+\b 28.@required\par
+\b0 Applied to bean setter method and enforce the required property.\par
+it indicates that the affected bean must be populated with required property otherwisew beaninitializationeexception is thrown.\par
+\b 30.@value\b0\par
+used at field constructor or setter method .it indicates the default value expression for the field,constructor or setter methods.\par
+\b 31. @predestroy/@postconstruct\par
+\b0 this annotation is used as an alternative to life cycle init and destroy methods.\par
+ \par
+ \par
+}
+ 
