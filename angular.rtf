@@ -18,7 +18,7 @@ angularjs vs angular\par
 \pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 supports 2way data binding\par
 {\pntext\f1\'B7\tab}it follows mvc design architecture\par
 {\pntext\f1\'B7\tab}supports static template and angular template\par
-{\pntext\f1\'B7\tab}custom directice can be added\par
+{\pntext\f1\'B7\tab}custom directive can be added\par
 {\pntext\f1\'B7\tab}supports restfull services\par
 {\pntext\f1\'B7\tab}client and server communication fascillated\par
 {\pntext\f1\'B7\tab}supports dependency injection\par
@@ -36,10 +36,10 @@ angularjs vs angular\par
 
 \pard\sa200\sl276\slmult1 6 what are templates in angular?\par
 
-\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 templates in angular are written in html that contains angular specific codes these \par
-{\pntext\f1\'B7\tab}templates are combined with information coming from model and controller that are rendered as dynamic view to the user.\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 templates in angular are written in html that contains angular specific codes \par
+{\pntext\f1\'B7\tab}these  templates are combined with information coming from model and controller that are rendered as dynamic view to the user.\par
 {\pntext\f1\'B7\tab}each angular application has atleast 1 component called root component that need to be bootstrap in root module \par
-{\pntext\f1\'B7\tab}the component consists application login inside the class. \par
+{\pntext\f1\'B7\tab}the component consists application logic inside the class. \par
 {\pntext\f1\'B7\tab}there can be several component in an angular application under each modules\par
 
 \pard\sa200\sl276\slmult1 7 what is string interpolation?\par
@@ -58,8 +58,10 @@ angularjs vs angular\par
 \pard\sa200\sl276\slmult1\tab as the name suggests, it controls how the data flows from server to html ui.\par
 10 what are directives in angular?\par
 
-\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 directives are core features of angular, that allows us to write new html syntaxes . \par
-{\pntext\f1\'B7\tab}directives add behaviour to existing dom elements or component instances\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 directives add behaviour to existing dom elements or component instances\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 component i sa directives with associated view(i.e html to be rendered)\par
+{\pntext\f1\'B7\tab}all components are directives but not all directives are component\par
 
 \pard\sa200\sl276\slmult1\tab these are segregated in 3 types\par
 
@@ -67,14 +69,14 @@ angularjs vs angular\par
 {\pntext\f0 1.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pndec{\pntxta.}}
 \fi-360\li720\sa200\sl276\slmult1 component directives:\par
 
-\pard\sa200\sl276\slmult1\tab directive with template\par
+\pard\sa200\sl276\slmult1\tab a directive with a view and associted behaviour with it . this kind of directive usually \tab add behaviour to dom elements\par
         2.    structural directive\par
 \tab change the dom layout by adding or removing dom elements \par
 \tab eg *ngIf,*ngSwitch,8ngFor\par
        3.   Attribute directive\par
 \tab changes the appearence and behaviours of another element ,component and other \tab directive . eg ngClass.ngStyle\par
 11.  what is data binding in angular?\par
-Bind binding means the communication between typescript code of the component and template which the uer sees . suppose you have some bussiness logic and you want some  dynamic data from server and wants to render this dynamic data to the tempplate because this is what user sees. this is where data binding comed into picture because we need some sort of communication between typescript code and template .\par
+Bind binding means the communication between typescript code of the component and template which the uer sees . suppose you have some bussiness logic and you want some  dynamic data from server and wants to render this dynamic data to the tempplate because this is what user sees. this is where data binding comes into picture because we need some sort of communication between typescript code and template .\par
 types of data binding\par
 1. string interpolation is a one way data binding which is used to output data from typescript code to html template. it uses expression within double curly braces to display data from typescript to template. it evaluates the expression or used to call the methods ex. \{\{expression\}\}\par
 2. property bindind is also 1 way data binding which is used to bind the property of the dom elements to the field which is property of typescript code.\par
@@ -116,7 +118,7 @@ ng new <name> : to create project\par
 service is used when comman functiionality need to executed within different modules.\par
 using service it will create singleton instance ,whenever any changes takes place in data it will be reflected to others as well.\par
 17 what is dependency injection in angular?\par
-dependency injection is an important design pattern in whcih a class asks for dependencies from extrnal sources rather than creating them itself. here dependencies are services and objects so we can have services depend on other services throughout the application.\par
+dependency injection is an important design pattern in which a class asks for dependencies from extrnal sources rather than creating them itself. here dependencies are services and objects so we can have services depend on other services throughout the application.\par
 18 what are pipes?\par
 A pipe takes in data and transforms it to desired output.\par
 for example toupper pipe takes a string literals and transforms every character to capital and return the result to template expression.\par
@@ -128,7 +130,7 @@ Apart from built pipe , we can built custom pipes\par
 {\pntext\f1\'B7\tab}@pipe decorator defines pipename that will be used in tempplate expressions.\par
 
 \pard\sa200\sl276\slmult1 20. What is authentication and authorization?\par
-The User login credentials are passed to authenticate api, which is present in the server.  on post server side validation successfully completes, a json web token(JSON) is returned to the user. the jwt has information or attributes about the current usser. the user is then identified using this token. this id called authentication.\par
+The User login credentials are passed to authenticate api, which is present in the server.  on post server side validation successfully completes, a json web token(JSON) is returned to the user. the jwt has information or attributes about the current usser. the user is then identified using this token. this is called authentication.\par
 Post logging in successfully, different user have different level of access, some have access to entry level while some have access to full resoources. this level of access is called authorization.\par
 21. Overview of angular application\par
 
@@ -139,7 +141,7 @@ In single page technology, only a single page which is index.html is maintained.
 In traditional web technology, whenever a client request a web page, server responds to it by sending the requested web page,the client requests for another  web page, the responds again by sending requested resource. the problem with this technology is that it requires lot of time\par
 23.New Features of angular 6?\par
 1. Added ng update\par
-Cli command updtaes thier projecct dependencies to thier latest version. te ng update is normal packkage manager tool to identify and update other dependencies.\par
+Cli command updtaes thier projecct dependencies to thier latest version. the ng update is normal packkage manager tool to identify and update other dependencies.\par
 2.Uses Rxjs6\par
 rxjs is third party lib and introduces 2 new concepts\par
 Introduced new project structure\par
